@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.prod {
+    background-color: red;
+    color: white;
+    width: 40%;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-radius: 1rem;
+}
+
+.prodName {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+}
+
+li {
+    text-align: left;
+}

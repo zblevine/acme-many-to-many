@@ -15,7 +15,7 @@ const renderData = (products, companies, offerings) => {
     console.log('hello');
     document.querySelector('#products').innerHTML = products.map(
         prod => `<div class='prod'>
-            <span class='prodName'>${prod.name}</span>
+            <a class='prodName' href='#${prod.id}'>${prod.name}</a>
             <br><br>
             ${prod.description}
             <br><br>
@@ -23,7 +23,7 @@ const renderData = (products, companies, offerings) => {
             <br><br>
             <ul>${prodOfferingsHTML(prod, products, companies, offerings)}</ul>
         </div>`
-    );
+    ).join('');
 }
 
 const loadData = () => {
