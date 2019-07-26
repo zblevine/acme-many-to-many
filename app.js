@@ -2,8 +2,13 @@ const apiUrl = 'https://acme-users-api-rev.herokuapp.com/api';
 
 const prodOfferingsHTML = (prod, products, companies, offerings) => {
     return offerings.filter(offering => prod.id === offering.productId).map(offering => {
-        return '';
-    });
+        return `<li> Offered by: ${getCompanyName(offering.companyId, companies)} at ${offering.price}</li>`
+    }).join('');
+}
+
+const getCompanyName = (companyId, companies) => {
+    let newData = companies.filter(company => (companyId === company.id))
+    return newData[0].name;
 }
 
 const renderData = (products, companies, offerings) => {
